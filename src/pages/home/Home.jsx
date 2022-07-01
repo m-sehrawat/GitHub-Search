@@ -6,7 +6,7 @@ import style from './home.module.css'
 
 
 export const Home = () => {
-    
+
     const [username, setUsername] = useState('');
     const dispatch = useDispatch();
 
@@ -26,7 +26,9 @@ export const Home = () => {
                 <button
                     onClick={handleGetData}
                     className={style.btn}
-                >Search</button>
+                >
+                    Search
+                </button>
             </div>
 
             <RepoList />

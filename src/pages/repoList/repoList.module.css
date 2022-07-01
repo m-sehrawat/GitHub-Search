@@ -1,7 +1,3 @@
-.listBox {
-    border: 1px solid red;
-}
-
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -12,7 +8,6 @@
 
 .gridItem {
     height: 90px;
-    border: 1px solid red;
     padding: 10px;
     display: grid;
     grid-template-columns: 20% 77%;
@@ -28,7 +23,6 @@
 
 .imgBox {
     overflow: hidden;
-    border: 1px solid red;
 }
 
 .imgBox>img {
@@ -48,7 +42,6 @@
 }
 
 .userBox {
-    border: 1px solid red;
     max-width: 450px;
     margin: 20px auto;
 }
@@ -60,6 +53,7 @@
     transition: all 0.2s linear;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
