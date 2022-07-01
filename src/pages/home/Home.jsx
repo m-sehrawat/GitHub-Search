@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { shallowEqual } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { getDataRequest } from '../../redux/action';
+import { RepoList } from '../repoList/RepoList';
 import style from './home.module.css'
 
 export const Home = () => {
@@ -32,6 +33,8 @@ export const Home = () => {
                     className={style.btn}
                 >Search</button>
             </div>
+
+            {repoData.length > 0 && <RepoList />}
         </>
     );
 };
