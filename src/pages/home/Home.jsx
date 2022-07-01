@@ -1,6 +1,11 @@
+import { shallowEqual } from 'react-redux';
+import { useSelector } from 'react-redux';
 import style from './home.module.css'
 
 export const Home = () => {
+
+    const { isLoading, isError, repoData } = useSelector((state) => state, shallowEqual);
+
 
     return (
         <>
