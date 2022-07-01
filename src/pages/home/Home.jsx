@@ -7,9 +7,7 @@ import { RepoList } from '../repoList/RepoList';
 import style from './home.module.css'
 
 export const Home = () => {
-
-    const { isLoading, isError, repoData } = useSelector((state) => state, shallowEqual);
-    console.log('repoData:', repoData)
+    
     const [username, setUsername] = useState('');
     const dispatch = useDispatch();
 
@@ -34,7 +32,7 @@ export const Home = () => {
                 >Search</button>
             </div>
 
-            {repoData.length > 0 && <RepoList />}
+            <RepoList />
         </>
     );
 };

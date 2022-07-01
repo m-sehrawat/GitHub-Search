@@ -1,3 +1,44 @@
 .listBox {
     border: 1px solid red;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.gridItem {
+    height: 90px;
+    border: 1px solid red;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 20% 77%;
+    gap: 3%;
+    overflow: hidden;
+    background-color: #fbfbfc;
+    border-radius: 10px;
+}
+
+.imgBox {
+    overflow: hidden;
+    border: 1px solid red;
+}
+
+.imgBox>img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.textBox>h4 {
+    margin: 5px;
+    color: #1a78f4;
+}
+
+.textBox>p {
+    margin: 5px;
+    font-size: 13px;
+    color: gray;
+}

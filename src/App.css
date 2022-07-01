@@ -1,14 +1,15 @@
 body {
     margin: 0%;
+    font-family: 'Roboto', sans-serif;
 }
 
-.loading{
+.loading {
     display: flex;
     justify-content: center;
     height: 30vh;
 }
 
-.loading>p{
+.loading>p {
     margin: auto;
     font-size: 18px;
 }
