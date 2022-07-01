@@ -1,3 +1,31 @@
-.main{
+.main {
     border: 1px solid red;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    font-size: 16px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid #E0E0E0;
+    max-width: 300px;
+    width: 100%;
+
+}
+
+.btn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-width: 100px;
+    border: none;
+    font-size: 16px;
+    background-color: #E0E0E0;
+    transition: all 0.2s linear;
+}
+
+.btn:hover {
+    background-color: #BDBDBD;
 }
