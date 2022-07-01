@@ -19,6 +19,21 @@ export const RepoList = () => {
         <>
             <div className={style.listBox}>
 
+                <div className={style.userBox}>
+                    <div className={style.gridItem}>
+
+                        <div className={style.imgBox}>
+                            <img src={repoData[0].owner.avatar_url} />
+                        </div>
+
+                        <div className={style.textBox}>
+                            <h4>{repoData[0].owner.login}</h4>
+                            <button className={style.btn}>Followers</button>
+
+                        </div>
+                    </div>
+                </div>
+
                 <div className={style.grid}>
 
                     {repoData.map((data) => (

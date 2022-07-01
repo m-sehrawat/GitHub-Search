@@ -1,5 +1,4 @@
 export const RepoComponent = ({ style, owner, name, description }) => {
-
     return (
         <>
             <div className={style.gridItem}>

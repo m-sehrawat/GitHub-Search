@@ -18,7 +18,7 @@
     grid-template-columns: 20% 77%;
     gap: 3%;
     overflow: hidden;
-    background-color: #fbfbfc;
+    background-color: #f8f8f8;
     border-radius: 10px;
 }
 
@@ -41,4 +41,22 @@
     margin: 5px;
     font-size: 13px;
     color: gray;
+}
+
+.userBox{
+    border: 1px solid red;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background-color: #E0E0E0;
+    transition: all 0.2s linear;
+    border-radius: 10px;
+    border: none;
+}
+.btn:hover {
+    background-color: #BDBDBD;
 }
