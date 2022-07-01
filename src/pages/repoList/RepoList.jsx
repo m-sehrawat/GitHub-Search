@@ -8,8 +8,7 @@ import style from './repoList.module.css';
 
 export const RepoList = () => {
 
-    const { isLoading, isError, repoData } = useSelector((state) => state, shallowEqual)
-    console.log('repoData:', repoData)
+    const { isLoading, isError, repoData } = useSelector((state) => state, shallowEqual);
 
     return isLoading ? (
         <Loaidng />
@@ -38,7 +37,7 @@ export const RepoList = () => {
 
                     {repoData.map((data) => (
 
-                        <RepoComponent key={data.id} style={style} {...data} />
+                        <RepoComponent key={data.id} style={style} {...data} data={data} />
                     ))}
 
                 </div>

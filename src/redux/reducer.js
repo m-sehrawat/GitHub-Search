@@ -5,7 +5,7 @@ import { GET_DATA_ERROR, GET_DATA_LOADING, GET_DATA_SUCCESS } from "./actionType
 const initState = {
     isLoading: false,
     isError: false,
-    repoData: getItem('repoData') || []
+    repoData: getItem('repoData') || [], 
 };
 
 export const reducer = (state = initState, { type, payload }) => {

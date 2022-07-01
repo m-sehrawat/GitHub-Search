@@ -1,21 +1,18 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { shallowEqual } from 'react-redux';
-import { useSelector } from 'react-redux';
 import { getDataRequest } from '../../redux/action';
 import { RepoList } from '../repoList/RepoList';
 import style from './home.module.css'
+
 
 export const Home = () => {
     
     const [username, setUsername] = useState('');
     const dispatch = useDispatch();
 
-
     const handleGetData = () => {
         dispatch(getDataRequest(username));
     };
-
 
     return (
         <>

@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
+import { setItem } from "../functions/localStorage";
 
-export const RepoComponent = ({ style, owner, name, description, id }) => {
+
+export const RepoComponent = ({ style, owner, name, description, id, data }) => {
+
+    const handleSingleRepoData = () => {
+        setItem('singleRepo', data);
+    };
+
     return (
         <>
-            <Link className={style.link} to={`/details/${id}`}>
-                
+            <Link onClick={handleSingleRepoData} className={style.link} to={`/details/${id}`}>
+
                 <div className={`${style.gridItem} ${style.cursor}`}>
 
                     <div className={style.imgBox}>
