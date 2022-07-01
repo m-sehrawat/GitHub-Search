@@ -1,4 +1,5 @@
 import axios from "axios";
+import { setItem } from "../functions/localStorage";
 import { GET_DATA_ERROR, GET_DATA_LOADING, GET_DATA_SUCCESS } from "./actionTypes";
 
 export const getDataLoading = () => {
@@ -18,6 +19,7 @@ export const getDataRequest = (username) => async (dispatch) => {
     try {
         dispatch(getDataLoading());
         const { data } = await axios.get(`/${username}/repos`);
+        setItem('repoData', data);
         dispatch(getDataSuccess(data));
     } catch (err) {
         console.log(err);
