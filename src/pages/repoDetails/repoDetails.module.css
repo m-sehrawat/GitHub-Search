@@ -1,16 +1,17 @@
 .container {
     max-width: 1000px;
-    margin: 50px auto 0px;
+    margin: 50px auto;
     min-height: 500px;
-    border-radius: 10px;
-    padding: 30px;
-    background: #f8f8f8;
+    padding: 10px; 
 }
 
 .grid {
     display: grid;
     grid-template-columns: 35% 62%;
     gap: 30px;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .grid>div {
@@ -31,4 +32,11 @@
 
 .textBox {
     padding-left: 30px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 100%;
+    }
 }
