@@ -1,28 +1,32 @@
 import { shallowEqual } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Error } from '../../components/Error';
 import { Loaidng } from '../../components/Loading';
 import { RepoComponent } from '../../components/RepoComponent';
 import { SearchGIF } from '../../components/SearchGIF';
+import { clearResultSuccess } from '../../redux/action';
 import style from './repoList.module.css';
 
 
 export const RepoList = () => {
 
     const { isLoading, isError, repoData } = useSelector((state) => state, shallowEqual);
+    console.log('repoData:', repoData)
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const displayFollowers = () => {
         navigate('/followers');
     };
 
-    if (repoData.length === 0) {
-        return (
-            <SearchGIF />
-        );
-    }
+    const handleClearResult = () => {
+        dispatch(clearResultSuccess());
+    };
 
+
+    if (repoData.length === 0) return <SearchGIF />;
 
     return isLoading ? (
         <Loaidng />
@@ -40,6 +44,7 @@ export const RepoList = () => {
                         <div className={style.textBox}>
                             <h4>{repoData[0].owner.login}</h4>
                             <button onClick={displayFollowers} className={style.btn}>Followers</button>
+                            <button onClick={handleClearResult} className={style.btn}>Clear Result</button>
                         </div>
                     </div>
                 </div>

@@ -56,6 +56,7 @@
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .btn:hover {

@@ -1,5 +1,5 @@
 import { getItem } from "../functions/localStorage";
-import { GET_DATA_ERROR, GET_DATA_LOADING, GET_DATA_SUCCESS } from "./actionTypes";
+import { CLEAR_RESULT, GET_DATA_ERROR, GET_DATA_LOADING, GET_DATA_SUCCESS } from "./actionTypes";
 
 
 const initState = {
@@ -30,6 +30,12 @@ export const reducer = (state = initState, { type, payload }) => {
                 ...state,
                 isLoading: false,
                 isError: true
+            };
+        case CLEAR_RESULT:
+            return {
+                ...state,
+                repoData: [],
+                followersData: []
             };
         default:
             return state;

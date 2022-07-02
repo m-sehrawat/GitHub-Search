@@ -1,6 +1,6 @@
 import axios from "axios";
-import { setItem } from "../functions/localStorage";
-import { GET_DATA_ERROR, GET_DATA_LOADING, GET_DATA_SUCCESS } from "./actionTypes";
+import { removeItem, setItem } from "../functions/localStorage";
+import { CLEAR_RESULT, GET_DATA_ERROR, GET_DATA_LOADING, GET_DATA_SUCCESS } from "./actionTypes";
 
 
 export const getDataLoading = () => {
@@ -13,6 +13,10 @@ export const getDataSuccess = (payload) => {
 
 export const getDataError = () => {
     return { type: GET_DATA_ERROR };
+};
+
+export const clearResult = () => {
+    return { type: CLEAR_RESULT };
 };
 
 
@@ -28,4 +32,10 @@ export const getDataRequest = (username) => async (dispatch) => {
         console.log(err);
         dispatch(getDataError());
     }
+};
+
+export const clearResultSuccess = () => (dispatch) => {
+    dispatch(clearResult());
+    removeItem('repoData');
+    removeItem('followersData');
 };
