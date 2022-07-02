@@ -1,0 +1,28 @@
+.display{
+    display: flex;
+    padding: 10px 40px;
+   
+    justify-content: space-between;
+    background-color: #f8f8f8;
+}
+
+.heading {
+    font-weight: 300;
+    font-size: 25px;
+    margin: 0px;
+}
+
+.btn {
+    border-radius: 10px;
+    min-width: 80px;
+    height: 35px;
+    border: none;
+    font-size: 14px;
+    background-color: #E0E0E0;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #BDBDBD;
+}

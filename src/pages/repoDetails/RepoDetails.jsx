@@ -6,7 +6,7 @@ export const RepoDetails = () => {
 
     const data = getItem('singleRepo');
     const { owner: { avatar_url }, name, topics, full_name, description, clone_url, forks, language, watchers, visibility } = data;
-    console.log('data:', data)
+
 
     return (
         <>
@@ -20,9 +20,9 @@ export const RepoDetails = () => {
 
                     <div>
                         <h1>{name}</h1>
-                        <p>Link: {full_name}</p>
+                        <p>Link: <i>{full_name}</i></p>
                         <p>{description}</p>
-                        <p>You want to clone it: {clone_url}</p>
+                        <p>You want to clone it: <i>{clone_url}</i></p>
 
                     </div>
 
@@ -31,18 +31,18 @@ export const RepoDetails = () => {
                         <h3>{name}</h3>
                         <p>Category</p>
                         <ul>
-                            {topics.map((e) => (
-                                <li>{e}</li>
+                            {topics.map((e, i) => (
+                                <li key={i}>{e}</li>
                             ))}
                         </ul>
                     </div>
 
                     <div>
                         <h4>Other details</h4>
-                        <p>Language: {language}</p>
-                        <p>Visibility: {visibility}</p>
-                        <p>Forks: {forks}</p>
-                        <p>Watchers: {watchers}</p>
+                        <p>Language: <i>{language}</i></p>
+                        <p>Visibility: <i>{visibility}</i></p>
+                        <p>Forks: <i>{forks}</i></p>
+                        <p>Watchers: <i>{watchers}</i></p>
                     </div>
 
                 </div>
