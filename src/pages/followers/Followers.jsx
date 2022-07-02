@@ -1,6 +1,11 @@
+import { useSelector } from 'react-redux';
+import { FollowerList } from '../../components/FollowerList';
 import style from './followers.module.css';
 
 export const Followers = () => {
+
+    const followersData = useSelector((state) => state.followersData);
+    console.log('followersData:', followersData)
 
     return (
         <>
@@ -10,9 +15,9 @@ export const Followers = () => {
                 </div>
 
                 <div className={style.grid}>
-                    {[[1, 2, 3, 4].map((follower) => (
-                        <div>1</div>
-                    ))]}
+                    {followersData.map((data) => (
+                        <FollowerList key={data.id} {...data} style={style} />
+                    ))}
                 </div>
             </div>
         </>

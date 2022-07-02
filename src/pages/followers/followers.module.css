@@ -1,19 +1,40 @@
 .main {
-    border: 1px solid red;
-    max-width: 1000px;
+    max-width: 800px;
     margin: 30px auto;
 }
 
 .textBox {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px;
 }
 
-.grid>div {
-    border: 1px solid red;
+.gridItem {
+    display: grid;
+    grid-template-columns: 23% 67%;
+    gap: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+.img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.followerText h4 {
+    margin: 5px;
+    color: #1a78f4;
+}
+
+.followerText p {
+    margin: 5px;
+    color: gray;
+
 }
