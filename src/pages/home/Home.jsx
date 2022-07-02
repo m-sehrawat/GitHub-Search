@@ -12,6 +12,7 @@ export const Home = () => {
 
     const handleGetData = () => {
         dispatch(getDataRequest(username));
+        setUsername('');
     };
 
     return (
@@ -19,9 +20,10 @@ export const Home = () => {
             <div className={style.main}>
                 <input
                     onChange={(e) => { setUsername(e.target.value) }}
+                    value={username}
                     type={'text'}
                     className={style.input}
-                    placeholder='type username here'
+                    placeholder='Username'
                 />
                 <button
                     onClick={handleGetData}

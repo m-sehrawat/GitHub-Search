@@ -26,3 +26,12 @@
 .btn:hover {
     background-color: #BDBDBD;
 }
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover{
+    color: rgb(0, 14, 210);
+}
