@@ -2,6 +2,7 @@ import axios from "axios";
 import { setItem } from "../functions/localStorage";
 import { GET_DATA_ERROR, GET_DATA_LOADING, GET_DATA_SUCCESS } from "./actionTypes";
 
+
 export const getDataLoading = () => {
     return { type: GET_DATA_LOADING };
 };
@@ -18,9 +19,11 @@ export const getDataError = () => {
 export const getDataRequest = (username) => async (dispatch) => {
     try {
         dispatch(getDataLoading());
-        const { data } = await axios.get(`/${username}/repos`);
-        setItem('repoData', data);
-        dispatch(getDataSuccess(data));
+        const { data: repoData } = await axios.get(`/${username}/repos`);
+        const { data: followersData } = await axios.get(`/${username}/followers`);
+        setItem('repoData', repoData);
+        setItem('followersData', followersData);
+        dispatch(getDataSuccess({ repoData, followersData }));
     } catch (err) {
         console.log(err);
         dispatch(getDataError());

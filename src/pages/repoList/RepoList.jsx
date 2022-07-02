@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Error } from '../../components/Error';
 import { Loaidng } from '../../components/Loading';
 import { RepoComponent } from '../../components/RepoComponent';
+import { SearchGIF } from '../../components/SearchGIF';
 import style from './repoList.module.css';
 
 
@@ -15,6 +16,12 @@ export const RepoList = () => {
     const displayFollowers = () => {
         navigate('/followers');
     };
+
+    if (repoData.length === 0) {
+        return (
+            <SearchGIF />
+        );
+    }
 
 
     return isLoading ? (

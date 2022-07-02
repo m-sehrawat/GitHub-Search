@@ -5,17 +5,32 @@ import { GET_DATA_ERROR, GET_DATA_LOADING, GET_DATA_SUCCESS } from "./actionType
 const initState = {
     isLoading: false,
     isError: false,
-    repoData: getItem('repoData') || [], 
+    repoData: getItem('repoData') || [],
+    followersData: getItem('followersData') || []
 };
 
 export const reducer = (state = initState, { type, payload }) => {
     switch (type) {
         case GET_DATA_LOADING:
-            return { ...state, isLoading: true, isError: false };
+            return {
+                ...state,
+                isLoading: true,
+                isError: false
+            };
         case GET_DATA_SUCCESS:
-            return { ...state, isLoading: false, isError: false, repoData: payload };
+            return {
+                ...state,
+                isLoading: false,
+                isError: false,
+                repoData: payload.repoData,
+                followersData: payload.followersData
+            };
         case GET_DATA_ERROR:
-            return { ...state, isLoading: false, isError: true };
+            return {
+                ...state,
+                isLoading: false,
+                isError: true
+            };
         default:
             return state;
     }

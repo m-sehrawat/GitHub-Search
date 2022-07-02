@@ -1,13 +1,13 @@
 export const getItem = (key) => {
-    if (localStorage.getItem(key) !== null) {
-        return JSON.parse(localStorage.getItem(key));
+    if (sessionStorage.getItem(key) !== null) {
+        return JSON.parse(sessionStorage.getItem(key));
     }
     return undefined;
 };
 
 
 export const setItem = (key, value) => {
-    return localStorage.setItem(key, JSON.stringify(value));
+    return sessionStorage.setItem(key, JSON.stringify(value));
 };
 
 

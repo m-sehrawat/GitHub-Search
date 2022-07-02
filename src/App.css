@@ -13,3 +13,12 @@ body {
     margin: auto;
     font-size: 18px;
 }
+
+.searchGifDiv {
+    max-width: 400px;
+    margin:auto;
+}
+
+.searchGifDiv>img{
+    width: 100%;
+}
