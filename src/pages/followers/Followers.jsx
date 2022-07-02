@@ -2,10 +2,10 @@ import { useSelector } from 'react-redux';
 import { FollowerList } from '../../components/FollowerList';
 import style from './followers.module.css';
 
+
 export const Followers = () => {
 
     const followersData = useSelector((state) => state.followersData);
-    console.log('followersData:', followersData)
 
     return (
         <>
