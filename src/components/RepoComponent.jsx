@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { setItem } from "../functions/localStorage";
+import { setItem } from "../utils/localStorage";
 
 
 export const RepoComponent = ({ style, owner, name, description, id, data }) => {

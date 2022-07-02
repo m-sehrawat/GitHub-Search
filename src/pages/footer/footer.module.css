@@ -1,0 +1,23 @@
+.main {
+    height: 150px;
+    background: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    border-radius: 10px;
+    min-width: 80px;
+    height: 35px;
+    border: none;
+    font-size: 14px;
+    background-color: #E0E0E0;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+.btn:hover {
+    background-color: #BDBDBD;
+}

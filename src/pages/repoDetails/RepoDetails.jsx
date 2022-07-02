@@ -1,4 +1,4 @@
-import { getItem } from '../../functions/localStorage';
+import { getItem } from '../../utils/localStorage';
 import style from './repoDetails.module.css';
 
 

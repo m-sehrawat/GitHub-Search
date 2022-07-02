@@ -1,5 +1,5 @@
 import axios from "axios";
-import { removeItem, setItem } from "../functions/localStorage";
+import { removeItem, setItem } from "../utils/localStorage";
 import { CLEAR_RESULT, GET_DATA_ERROR, GET_DATA_LOADING, GET_DATA_SUCCESS } from "./actionTypes";
 
 

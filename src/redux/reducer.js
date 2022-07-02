@@ -1,4 +1,4 @@
-import { getItem } from "../functions/localStorage";
+import { getItem } from "../utils/localStorage";
 import { CLEAR_RESULT, GET_DATA_ERROR, GET_DATA_LOADING, GET_DATA_SUCCESS } from "./actionTypes";
 
 

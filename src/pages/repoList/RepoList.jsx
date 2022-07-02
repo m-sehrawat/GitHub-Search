@@ -13,7 +13,6 @@ import style from './repoList.module.css';
 export const RepoList = () => {
 
     const { isLoading, isError, repoData } = useSelector((state) => state, shallowEqual);
-    console.log('repoData:', repoData)
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
