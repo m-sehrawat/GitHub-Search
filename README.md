@@ -14,14 +14,14 @@
 
 ![GutHubSearch](https://user-images.githubusercontent.com/91532881/177000415-787de44c-f2b9-4ad9-b1cf-f4c7156c213d.jpg)
 
-<h3 align="center"><a href=""><strong>Want to see live preview »</strong></a></h3>
+<h3 align="center"><a href="https://mohit-githubsearch.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
 
 <p align="center"> 
     <br />&#10023;
     <a href="#Demo">View Demo</a>   &#10023;  
     <a href="https://github.com/m-sehrawat/GitHub-Search/issues">Report Bug</a>    &#10023;
     <a href="#Getting-Started">Getting Started</a> &#10023; <a href="#Install">Installing</a> &#10023;    
-    <a href="#Author">Author</a> &#10023;
+    <a href="#Contact">Author</a> &#10023;
   </p>
   
 
@@ -119,7 +119,7 @@ npm run dev
 
 
 
-<h2>📬 Contact</h2>
+## Contact
 
 If you want to contact me, you can reach me through below handles.
 
